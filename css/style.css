@@ -16,6 +16,7 @@ body{
     line-height: 22px;
     color:#fbfdff;
     background-color: rgb(14, 13, 13);
+    user-select: none;
 }
 .container{
     width: 100%;
@@ -97,14 +98,18 @@ body{
     color: red;
 }
 .piano-item:active{
-transform: scaleY(-0.96);
+transform: skewY(2deg);
+transform: scale(0.97);
 }
-/* .piano-item h1{
+.active{
+    transform: skewY(2deg);
+transform: scale(0.97);
+}
+.piano-item h1{
     z-index: 100;
     position: absolute;
-    bottom: 7px;
-    left: 23px;
-} */
+    bottom: 0;
+}
 .black-item h1{
     position: absolute;
     bottom: 10px;

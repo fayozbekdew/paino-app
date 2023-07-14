@@ -1,14 +1,10 @@
 const items = document.querySelectorAll('.piano-item')
-
-items.forEach((item) => {
-    item.addEventListener('click', (e) => {
-        console.log(item.classList.contains('piano-item'));
-    })
-})
+let event;
 
 items.forEach((item) => {
     item.addEventListener('click', (itemm) => {
         if(item.classList.contains('item-1')){
+            console.log(itemm);
             let crash = new Audio(`../sounds/key01.ogg`);
             crash.play()
         }else if(item.classList.contains('item-2')){
@@ -121,6 +117,8 @@ items.forEach((item) => {
         }
     })
 })
+
+
 document.addEventListener('keydown', (itemm) => {
     if(itemm.code === 'KeyA'){
         let crash = new Audio(`../sounds/key01.ogg`);
